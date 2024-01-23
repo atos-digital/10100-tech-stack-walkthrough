@@ -9,15 +9,12 @@ var index = `
 <!DOCTYPE html>
 <html lang="en">
   <body>
-  	<div id="counter">Counter: 0</div>
+   <div id="counter">Counter: 0</div>
 
-	<button>
-		Add 1
-	</button>
+    <button>Add 1</button>
 
-	<button>
-		Reset!
-	</button>
+    <button>Reset!</button>
+
   </body>
 </html>
 `
