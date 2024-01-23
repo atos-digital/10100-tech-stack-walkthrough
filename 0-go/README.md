@@ -11,15 +11,11 @@ var index = `
 <!DOCTYPE html>
 <html lang="en">
   <body>
-  	<div id="counter">Counter: 0</div>
+   <div id="counter">Counter: 0</div>
 
-    <button>
-    	Add 1
-    </button>
+    <button>Add 1</button>
 
-    <button>
-    	Reset!
-    </button>
+    <button>Reset!</button>
 
   </body>
 </html>
@@ -30,10 +26,10 @@ Declares a variable named `index` and assigns it a string containing a HTML code
 
 ```go
 func main() {
-	http.HandleFunc("/", handleIndex)
+ http.HandleFunc("/", handleIndex)
 
-	log.Print("Listening on :8080...")
-	http.ListenAndServe(":8080", nil)
+ log.Print("Listening on :8080...")
+ http.ListenAndServe(":8080", nil)
 }
 ```
 
@@ -47,7 +43,7 @@ A HTTP handler can contain any kind of logic, but must always take a `http.Respo
 
 ```go
 func handleIndex(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte(index))
+ w.Write([]byte(index))
 }
 ```
 
