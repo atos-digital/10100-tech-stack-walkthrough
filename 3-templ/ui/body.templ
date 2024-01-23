@@ -1,0 +1,21 @@
+package ui
+
+templ Body() {
+	<div id="counter" class="font-bold text-lg text-red-600">Counter: 0</div>
+	<button
+		hx-get="/hx/add-one"
+		hx-target="#counter"
+		hx-swap="outerHTML"
+		class="rounded-full bg-blue-600 text-white px-2 py-1"
+	>
+		Add 1
+	</button>
+	<button
+		hx-get="/hx/reset"
+		hx-target="#counter"
+		hx-swap="outerHTML"
+		class="rounded-full bg-blue-600 text-white px-2 py-1"
+	>
+		Reset
+	</button>
+}
