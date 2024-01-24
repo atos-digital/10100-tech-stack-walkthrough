@@ -18,7 +18,9 @@ For a better dev experience, we recommend installing the official `templ-vscode`
 
 ## Using templ in this codebase
 
-templ components in files with the `.templ` extension can be treated and edited as normal HTML. Once you are happy with your changes, run the following command to generate Go templates for rendering HTML from your `.templ` files.
+Files with the `.templ` extension contain templ components, which utilise a mix of Go and HTML syntax. For a full list of templ syntax and features, refer to the [templ documentation](https://templ.guide/syntax-and-usage/basic-syntax/).
+
+To generate Go templates for rendering HTML from your `.templ` files, run the following command:
 
 ```bash
 templ generate
