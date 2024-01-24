@@ -33,9 +33,9 @@ func main() {
 }
 ```
 
-`http.HandleFunc("/", handleIndex)` registers a handler function `handleIndex` to be called when the root URL ("/") is accessed.
+`http.HandleFunc("/", handleIndex)` registers a HTTP handler function `handleIndex` to be called when the root URL ("/") is accessed.
 
-A handler function can contain any kind of logic, but must always take a `http.ResponseWriter` and a `http.Request` as its arguments. The `http.ResponseWriter` is used to write the response to the client. The `http.Request` contains information about the request, such as the URL and the request headers.
+A HTTP handler can contain any kind of logic, but must always take a `http.ResponseWriter` and a `http.Request` as its arguments. The `http.ResponseWriter` is used to write the response to the client. The `http.Request` contains information about the request, such as the URL and the request headers.
 
 `log.Print("Listening on :8080...")` logs a message indicating that the server is listening on port 8080.
 

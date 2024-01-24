@@ -1,37 +1,21 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"log"
 	"net/http"
+
+	"github.com/atos-digital/htmx-counter/3-templ/ui"
 )
 
 var counter = 0
 
-var counterHTML = `<div id="counter">Counter: %d</div>`
-
-var index = `
-<!DOCTYPE html>
-<html lang="en">
-	<head>  
-		<script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
-	</head>
-	
-	<body>
-	<div id="counter">Counter: 0</div>
-
-	<button hx-get="/hx/add-one" hx-target="#counter" hx-swap="outerHTML">
-		Add 1
-	</button>
-
-	<button hx-get="/hx/reset" hx-target="#counter" hx-swap="outerHTML">
-		Reset
-	</button>
-	</body>
-</html>
-`
+var counterHTML = `<div id="counter" class="font-bold text-lg text-red-600">Counter: %d</div>`
 
 func main() {
+	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("assets"))))
+
 	http.HandleFunc("/", handleIndex)
 	http.HandleFunc("/hx/add-one", handleAddOne)
 	http.HandleFunc("/hx/reset", handleReset)
@@ -41,7 +25,7 @@ func main() {
 }
 
 func handleIndex(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte(index))
+	ui.Index(ui.Body()).Render(context.Background(), w)
 }
 
 func handleAddOne(w http.ResponseWriter, r *http.Request) {

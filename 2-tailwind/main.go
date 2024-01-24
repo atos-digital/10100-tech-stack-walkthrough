@@ -8,17 +8,21 @@ import (
 
 var counter = 0
 
-var counterHTML = `<div id="counter">Counter: %d</div>`
+var counterHTML = `<div id="counter" class="font-bold text-lg text-red-600">Counter: %d</div>`
 
 func main() {
-	fs := http.FileServer(http.Dir("./src"))
-	http.Handle("/", fs)
+	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("assets"))))
 
+	http.HandleFunc("/", handleIndex)
 	http.HandleFunc("/hx/add-one", handleAddOne)
 	http.HandleFunc("/hx/reset", handleReset)
 
 	log.Print("Listening on :8080...")
 	http.ListenAndServe(":8080", nil)
+}
+
+func handleIndex(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "./ui/index.html")
 }
 
 func handleAddOne(w http.ResponseWriter, r *http.Request) {
