@@ -1,3 +1,26 @@
+# Quickstart
+
+To run the code in this directory, execute the following command:
+
+```bash
+go run main.go
+```
+
+Install and run Tailwind with the following commands:
+
+```bash
+npm install -g tailwindcss
+npx tailwindcss -i ./input.css -o ./assets/output.css --watch
+```
+
+Install and run templ with the following commands:
+
+```bash
+go install github.com/a-h/templ/cmd/templ@latest
+go mod tidy
+templ generate
+```
+
 # Getting Started with templ
 
 We use [templ](https://templ.guide/) to generate HTML templates from Go code.

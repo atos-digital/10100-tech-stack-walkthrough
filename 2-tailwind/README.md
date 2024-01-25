@@ -1,3 +1,18 @@
+# Quickstart
+
+To run the code in this directory, execute the following command:
+
+```bash
+go run main.go
+```
+
+Install and run Tailwind with the following commands:
+
+```bash
+npm install -g tailwindcss
+npx tailwindcss -i ./input.css -o ./assets/output.css --watch
+```
+
 # Getting Started with Tailwind
 
 We use [Tailwind](https://tailwindcss.com/) for styling HTML components.
