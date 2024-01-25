@@ -1,3 +1,11 @@
+# Quickstart
+
+To run the code in this directory, execute the following command:
+
+```bash
+go run main.go
+```
+
 # Code Explanation for 0-go
 
 ```go

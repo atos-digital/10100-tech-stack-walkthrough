@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/atos-digital/htmx-counter/4-air/ui"
+	"github.com/atos-digital/10100-tech-stack-walkthrough/4-air/ui"
 )
 
 var counter = 0

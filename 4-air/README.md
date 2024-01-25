@@ -1,3 +1,27 @@
+# Quickstart
+
+Install and run Tailwind with the following commands:
+
+```bash
+npm install -g tailwindcss
+npx tailwindcss -i ./input.css -o ./assets/output.css --watch
+```
+
+Install and run templ with the following commands:
+
+```bash
+go install github.com/a-h/templ/cmd/templ@latest
+go mod tidy
+templ generate
+```
+
+Install and run Air with the following commands:
+
+```bash
+go install github.com/cosmtrek/air@latest
+air
+```
+
 # Getting Started with Air
 
 We use Air to automatically rebuild our Tailwind CSS, templ components, and Go server whenever we make changes to our code.
@@ -83,9 +107,9 @@ This tells to Air to watch for changes to `.templ` and `.css` files in addition 
 ### `main.go`
 
 ```go
-"github.com/atos-digital/htmx-counter/3-templ/ui"
+"github.com/atos-digital/10100-tech-stack-walkthrough/3-templ/ui"
 ---
-"github.com/atos-digital/htmx-counter/4-air/ui"
+"github.com/atos-digital/10100-tech-stack-walkthrough/4-air/ui"
 ```
 
 The only change in this file is the import path for the `ui` package.
