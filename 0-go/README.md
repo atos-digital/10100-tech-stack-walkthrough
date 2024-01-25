@@ -2,17 +2,10 @@
 
 To install Go, follow the official instructions for your operating system [here](https://go.dev/doc/install).
 
-In VS Code, open your `~/.bashrc` or `~/.zshrc` file (depending on whether you are using bash or zsh) using one of the following commands:
-
-```bash
-code ~/.bashrc
-code ~/.zshrc
-```
-
-Add the following to the top of your `~/.bashrc` or `~/.zshrc` file. Replace `$HOME/go/bin` with the path to your Go bin directory.
+Add the following to your `~/.bashrc` or `~/.zshrc` file (depending on whether you are using bash or zsh). Replace `$HOME/go/bin` with the path to your Go bin directory.
 
 ```
-export PATH="$HOME/go/bin:$PATH"
+export PATH="$PATH:$HOME/go/bin"
 ```
 
 To run the code in this directory, execute the following command:
