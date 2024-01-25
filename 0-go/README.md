@@ -1,10 +1,36 @@
 # Quickstart
 
+To install Go, follow the official instructions for your operating system [here](https://go.dev/doc/install).
+
+Add the following to your `~/.bashrc` or `~/.zshrc` file (depending on whether you are using bash or zsh). Replace `$HOME/go/bin` with the path to your Go bin directory.
+
+```
+export PATH="$PATH:$HOME/go/bin"
+```
+
 To run the code in this directory, execute the following command:
 
 ```bash
 go run main.go
 ```
+
+# Getting Started with Go
+
+## Using Go in this codebase
+
+In this codebase, Go has been fully set up. Simply follow the instructions in the [Quickstart](#quickstart) section to install Go and run the code.
+
+## Setting up Go in your own codebase
+
+To initialise your own Go project, run the following command:
+
+```bash
+go mod init github.com/<username>/<repository>
+```
+
+This will create a `go.mod` file in your project directory. The `go.mod` file contains information about your project, such as its name and dependencies.
+
+You can find a comprehensive tutorial for creating your first Go project [here](https://go.dev/doc/tutorial/getting-started).
 
 # Code Explanation for 0-go
 

@@ -6,6 +6,16 @@ To run the code in this directory, execute the following command:
 go run main.go
 ```
 
+# Getting Started with htmx
+
+## Using htmx in this codebase
+
+In this codebase, htmx has been fully set up, so there's no need to install anything. Read the [code explanation](#code-explanation-for-1-htmx) below to understand how htmx works.
+
+## Setting up htmx in your own codebase
+
+To set up htmx in your own codebase, follow the official instructions [here](https://htmx.org/docs/#installing).
+
 # Code Explanation for 1-htmx
 
 ```go
