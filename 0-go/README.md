@@ -1,10 +1,43 @@
 # Quickstart
 
+To install Go, follow the official instructions for your operating system [here](https://go.dev/doc/install).
+
+In VS Code, open your `~/.bashrc` or `~/.zshrc` file (depending on whether you are using bash or zsh) using one of the following commands:
+
+```bash
+code ~/.bashrc
+code ~/.zshrc
+```
+
+Add the following to the top of your `~/.bashrc` or `~/.zshrc` file. Replace `$HOME/go/bin` with the path to your Go bin directory.
+
+```
+export PATH="$HOME/go/bin:$PATH"
+```
+
 To run the code in this directory, execute the following command:
 
 ```bash
 go run main.go
 ```
+
+# Getting Started with Go
+
+## Using Go in this codebase
+
+In this codebase, Go has been fully set up. Simply follow the instructions in the [Quickstart](#quickstart) section to install Go and run the code.
+
+## Setting up Go in your own codebase
+
+To initialise your own Go project, run the following command:
+
+```bash
+go mod init github.com/<username>/<repository>
+```
+
+This will create a `go.mod` file in your project directory. The `go.mod` file contains information about your project, such as its name and dependencies.
+
+You can find a comprehensive tutorial for creating your first Go project [here](https://go.dev/doc/tutorial/getting-started).
 
 # Code Explanation for 0-go
 
