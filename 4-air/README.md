@@ -4,7 +4,6 @@ Install and run Tailwind with the following commands:
 
 ```bash
 npm install -g tailwindcss
-npx tailwindcss -i ./input.css -o ./assets/output.css --watch
 ```
 
 Install and run templ with the following commands:
@@ -12,13 +11,12 @@ Install and run templ with the following commands:
 ```bash
 go install github.com/a-h/templ/cmd/templ@latest
 go mod tidy
-templ generate
 ```
 
 Install and run Air with the following commands:
 
 ```bash
-go install github.com/cosmtrek/air@latest
+go install github.com/air-verse/air@latest
 air
 ```
 
@@ -31,7 +29,7 @@ We use Air to automatically rebuild our Tailwind CSS, templ components, and Go s
 In this codebase, Air has been fully set up and configured. To run Air in this codebase, install it with the following command:
 
 ```bash
-go install github.com/cosmtrek/air@latest
+go install github.com/air-verse/air@latest
 ```
 
 Next, run the following command. Air will run continuously and automatically rebuild your code whenever you make changes to it. Make some changes to the templ components and reloading your browser to see Air in action.
@@ -47,7 +45,7 @@ If you want to set up Air from scratch in your own codebase, follow the steps be
 Install Air with the following command:
 
 ```bash
-go install github.com/cosmtrek/air@latest
+go install github.com/air-verse/air@latest
 ```
 
 Initialize the `.air.toml` configuration file with the default settings by running the following command:
@@ -64,7 +62,7 @@ Run Air with the following command. Air will run continuously and automatically 
 air
 ```
 
-# Code Explanation for 3-templ
+# Code Explanation for 4-air
 
 The only structural change from the previous example is the addition of the `.air.toml` file in the root directory.
 
